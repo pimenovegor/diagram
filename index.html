@@ -3,15 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>Diagram</title>
   </head>
   <body>
-    <div>
-      <canvas id="myChart"></canvas>
+    <div class="main">
+      <table class="table">
+        <tr>
+          <td class="chart">
+            <h3 class="name">Задания в РТК с просроченным SLA</h3>
+            <canvas id="overdue_tasks_chart"></canvas>
+          </td>
+          <td class="chart">
+            <h3 class="name">Инциденты, невзятые в работу</h3>
+            <canvas id="issue_chart"></canvas>
+          </td>
+        </tr>
+        <tr>
+          <td class="chart">
+            <h3 class="name">Ошибки ATM</h3>
+            <canvas id="faulty_atms_chart"></canvas>
+          </td>
+          <td class="chart"></td>
+        </tr>
+      </table>
     </div>
-    <script src="cnt_faulty_atms.js"></script> 
     <script src="node_modules/chart.js/dist/chart.js"></script>
-    <script src="app.js"></script>
+    <script src="cnt_faulty_atms.js"></script>
+    <script src="config/faulty_atms.js"></script>
+    <script src="cnt_issue.js"></script>
+    <script src="config/issue.js"></script>
+    <script src="cnt_overdue_tasks.js"></script>
+    <script src="config/overdue_tasks.js"></script>
   </body>
 </html>
